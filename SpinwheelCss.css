@@ -1,0 +1,202 @@
+body {
+  background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  margin-top: 60px;
+}
+
+.wheel-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 40px auto;
+}
+
+.pointer {
+  position: absolute;
+  top: 170px;
+  left: 107%;
+  transform: translateX(-50%) rotate(270deg);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #ff7675;
+  z-index: 2;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 6px solid white;
+  position: relative;
+  background: conic-gradient(
+    #ff7675 0deg 60deg,
+    #74b9ff 60deg 120deg,
+    #55efc4 120deg 180deg,
+    #ffeaa7 180deg 240deg,
+    #fd79a8 240deg 300deg,
+    #a29bfe 300deg 360deg
+  );
+  transition: transform 5s ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: glowBorder 4s linear infinite;
+  border: 6px solid white;
+  --text-rotation: 15deg;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 25%;
+  transform-origin: 0% 0%;
+  transform: rotate(calc(var(--i) * 60deg + var(--text-rotation))) translate(10%) rotate(30deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8em;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px; 
+}
+
+.label:nth-child(1) { transform: rotate(0deg) translate(10%) rotate(38deg); }
+.label:nth-child(2) { transform: rotate(60deg) translate(10%) rotate(33deg); }
+.label:nth-child(3) { transform: rotate(120deg) translate(10%) rotate(38deg); }
+.label:nth-child(4) { transform: rotate(180deg) translate(10%) rotate(38deg); }
+.label:nth-child(5) { transform: rotate(240deg) translate(10%) rotate(38deg); }
+.label:nth-child(6) { transform: rotate(300deg) translate(10%) rotate(38deg); }
+
+button {
+  background: #00cec9;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: glowBorder 4s linear infinite;
+  font-family: 'Orbitron', sans-serif;
+}
+
+button:hover {
+  background: #81ecec;
+  color: #2d3436;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  color: black;
+  padding: 30px 50px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 20px white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+@keyframes glowBorder {
+  0% { box-shadow: 0 0 20px 5px #ff7675; border-color: #ff7675; }
+  20% { box-shadow: 0 0 25px 6px #74b9ff; border-color: #74b9ff; }
+  40% { box-shadow: 0 0 25px 6px #55efc4; border-color: #55efc4; }
+  60% { box-shadow: 0 0 25px 6px #ffeaa7; border-color: #ffeaa7; }
+  80% { box-shadow: 0 0 25px 6px #fd79a8; border-color: #fd79a8; }
+  100% { box-shadow: 0 0 25px 6px #a29bfe; border-color: #a29bfe; }
+}
+
+button.spinning {
+  animation: glowBorder 0.5s linear infinite;
+  transform: scale(1.05);
+  box-shadow: 0 0 35px 10px white;
+}
+
+h1 {
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+}
+
+#shopButton {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #00ffff;
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 0 0 10px #00ffff;
+  box-shadow: 0 0 15px #00ffff;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#shopButton:hover {
+  color: #ff00ff;
+  border-color: #ff00ff;
+  text-shadow: 0 0 20px #ff00ff;
+  box-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+}
+
+.center-nose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, #fff, #999);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(255,255,255,0.8), 0 0 40px rgba(255,255,255,0.5);
+  z-index: 3;
+  animation: nose-glow 2s infinite ease-in-out;
+}
+
+@keyframes nose-glow {
+  0%, 100% { box-shadow: 0 0 20px #fff, 0 0 40px #00cec9; }
+  50% { box-shadow: 0 0 30px #81ecec, 0 0 60px #00cec9; }
+}

@@ -1,0 +1,164 @@
+body{
+    font-family: 'Exo 2', sans-serif;
+    text-align:center;
+    background-color: #f0f0f0;
+    margin-top: 100px;
+    transition: background-color 0.5s ease;
+    cursor: url("cursor.png"), auto;
+}
+h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    color: blue;
+    transition: color 0.5s ease;
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+h1:hover{
+    transform: scale(1.2);
+}
+
+.product-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.product-card{
+    background-color: white;
+    padding: 15px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+
+}
+
+.product-card img{
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: contain;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-card h3{
+    margin: 10px 0 5px;
+}
+
+button{
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 9px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+button:hover{
+    background-color:darkblue;
+}
+
+#WelcomeMessage {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5em;
+    color: green;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+    font-weight: bold;
+     
+}
+
+.product-card{
+    transition: background-color 0.6s;
+}
+
+.product-card{
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.product-card:hover{
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+  background-color: #222; 
+  color: white;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.section-title:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+#luckyWheelBtn {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  padding: 12px 25px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  background: white;
+  border: 3px solid #00bcd4;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.5);
+  transition: all 0.3s ease;
+  animation: glowPulse 2s infinite alternate;
+}
+
+#luckyWheelBtn:hover {
+  background: #00bcd4;
+  color: white;
+  border-color: #00bcd4;
+  box-shadow: 0 0 25px #00bcd4, 0 0 45px #00bcd4;
+  transform: scale(1.05);
+}
+
+
+@keyframes glowPulse {
+  from {
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.8);
+  }
+}
+footer {
+  width: 100%;
+  background: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #00bcd4;
+  box-shadow: 0 -2px 15px rgba(0, 188, 212, 0.2);
+  border-top: 2px solid rgba(0, 188, 212, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+footer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+

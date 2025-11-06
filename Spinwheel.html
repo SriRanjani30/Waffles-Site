@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <title>Electronic Store Lucky Wheel</title>
+  <link rel="stylesheet" href="SpinwheelCss.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎡 Electronic Store Lucky Wheel 🎯</h1>
+
+    <div class="wheel-container">
+      <div class="pointer"></div>
+      <div class="wheel" id="wheel">
+        <div class="label" style="--i:0;">iPhone 16</div>
+        <div class="label" style="--i:1;">Pixel 9a</div>
+        <div class="label" style="--i:2;">Rs 10,000</div>
+        <div class="label" style="--i:3;">Nothing</div>
+        <div class="label" style="--i:4;">40% Discount</div>
+        <div class="label" style="--i:5;">Dell Laptop</div>
+        <div class="center-nose"></div>
+
+      </div>
+    </div>
+
+    <button id="spinButton">SPIN</button>
+  </div>
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <p id="popupText"></p>
+      <button id="closePopup">OK</button>
+    </div>
+  </div>
+  <button id="shopButton" onclick="window.location.href='index.html'">Shop</button>
+  <canvas id="confetti"></canvas>
+
+  <script src="Spinwheeljs.js"></script>
+</body>
+</html>
